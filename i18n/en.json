@@ -1,0 +1,10 @@
+{
+  "customize_api_key": "CryptoConvert API Key",
+  "customize_api_key_description": "Obtain an API key from min-api.cryptocompare.com",
+  "customize_default_currency": "Default Currency",
+  "customize_default_currency_description": "The default currency to convert to -- default: USD",
+  "example_price": "BTC, XMR, etc",
+  "example_price_description": "Gets the value of a symbol in the home currency",
+  "example_convert": "0.5 BTC to XMR",
+  "example_convert_description": "Converts between Cryptocurrencies"
+}

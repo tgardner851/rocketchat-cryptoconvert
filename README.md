@@ -13,10 +13,10 @@ rocket.chat app to convert between cryptocurrencies using the cryptocompare API
 
 There are 2 command which this app registers:
 
-+ `/price` fetches the price for a given symbol e.g. `/price BTC` 
-+ you can fetch multiple prices for a symbol e.g. `/price BTC in XMR USD`...
++ `/cryptoprice` fetches the price for a given symbol e.g. `/cryptoprice BTC` 
++ you can fetch multiple prices for a symbol e.g. `/cryptoprice BTC in XMR USD`...
 
-+ `/convert` converts between to currencies for example `/convert 1 BTC to XMR`
++ `/cryptoconvert` converts between to currencies for example `/cryptoconvert 1 BTC to XMR`
 
 
 

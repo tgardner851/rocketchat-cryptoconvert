@@ -1,7 +1,7 @@
 import { IHttp, IModify, IPersistence, IRead, IHttpRequest, HttpStatusCode } from '@rocket.chat/apps-engine/definition/accessors';
 import { ISettingRead } from "@rocket.chat/apps-engine/definition/accessors/";
 
-import { Messages } from "./CryptoVertStrings";
+import { CryptoVertStrings } from "./CryptoVertStrings";
 
 export class CryptocompareAPI {
 
@@ -26,7 +26,7 @@ export class CryptocompareAPI {
         return Object.values(JSON.parse(result.content).Data).map((coin: any) => coin.Symbol); 
       }
       else {
-        throw new Error(Messages.FAILED_FETCH);
+        throw new Error(CryptoVertStrings.FAILED_FETCH);
       }
     }
 
@@ -56,7 +56,7 @@ export class CryptocompareAPI {
           
       } else {
       		// console.log("error " + JSON.stringify(result));
-      		throw new Error(Messages.FAILED_FETCH);
+      		throw new Error(CryptoVertStrings.FAILED_FETCH);
       }
     }
 
@@ -85,8 +85,7 @@ export class CryptocompareAPI {
           
       } else {
           // console.log("error " + JSON.stringify(result));
-          throw new Error(Messages.FAILED_FETCH);
+          throw new Error(CryptoVertStrings.FAILED_FETCH);
       }
-
     }
 }

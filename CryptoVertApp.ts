@@ -7,7 +7,7 @@ import { CryptoVertConvertCommand } from "./CryptoVertConvertCommand";
 import { CryptoVertPriceCommand } from "./CryptoVertPriceCommand";
 import { CryptocompareAPI } from "./CryptocompareAPI";
 import { CryptoVertSettings } from "./CryptoVertSettings";
-import { Messages } from "./CryptoVertStrings";
+import { CryptoVertStrings } from "./CryptoVertStrings";
 
 export class CryptoVertApp extends App {
 
@@ -78,15 +78,15 @@ export class CryptoVertApp extends App {
         case CryptoVertSettings.APIKEY.id: { // APIKEY:  we update the api key in the API
 
               if (setting.value && typeof setting.value === 'string' && setting.value.length == 64) {
-                await configurationModify.slashCommands.enableSlashCommand('convert');
-                await configurationModify.slashCommands.enableSlashCommand('price');
+                await configurationModify.slashCommands.enableSlashCommand('cryptoconvert');
+                await configurationModify.slashCommands.enableSlashCommand('cryptoprice');
                 //update the API key
                 this.api.setKey(setting.value);
               } 
               else {
-                this.getLogger().log(Messages.DISABLED_COMMANDS + setting.id);
-                await configurationModify.slashCommands.disableSlashCommand('convert');
-                await configurationModify.slashCommands.disableSlashCommand('price');
+                this.getLogger().log(CryptoVertStrings.DISABLED_COMMANDS + setting.id);
+                await configurationModify.slashCommands.disableSlashCommand('cryptoconvert');
+                await configurationModify.slashCommands.disableSlashCommand('cryptoprice');
               }
         }
         case CryptoVertSettings.HOMECURRENCY.id: { // DEFAULT CURRENCY: we issue a new command with the new currency 
@@ -102,9 +102,9 @@ export class CryptoVertApp extends App {
 
              }
              else {
-               this.getLogger().log(Messages.DISABLED_COMMANDS + setting.id);
-               await configurationModify.slashCommands.disableSlashCommand('convert');
-               await configurationModify.slashCommands.disableSlashCommand('price');
+               this.getLogger().log(CryptoVertStrings.DISABLED_COMMANDS + setting.id);
+               await configurationModify.slashCommands.disableSlashCommand('cryptoconvert');
+               await configurationModify.slashCommands.disableSlashCommand('cryptoprice');
              }
          }
       }
