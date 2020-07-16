@@ -4,7 +4,6 @@ import { ISlashCommand, SlashCommandContext } from '@rocket.chat/apps-engine/def
 import { Messages } from "./CryptoVertStrings";
 import { CryptocompareAPI } from "./CryptocompareAPI";
 import { CryptoVertSettings } from "./CryptoVertSettings";
-import { APIKEY } from "./devkey";
 
 export class CryptoVertPriceCommand implements ISlashCommand {
 	public command = 'price';
